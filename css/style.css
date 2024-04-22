@@ -7,3 +7,108 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
+
+/* || GENERAL */
+ul {
+    list-style-type: none;
+}
+
+/* || UTILITIES */
+.flex {
+    display: flex;
+}
+
+.center-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* || HEADER */
+header {
+    background-color: blueviolet;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 90vh;
+    width: 15vw;
+    z-index: 2;
+
+}
+
+.playlist-nav {
+    display: none;
+}
+
+/* || MAIN */
+.banner,
+footer {
+    background-color: rgb(24, 119, 12);
+    height: 10vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.banner {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-content {
+    background-color: rgb(206, 30, 98);
+    margin-left: 15vw;
+    padding: 10vh 0;
+}
+
+.main-content nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.recently-played,
+.for-you,
+.popular-artists {
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.recently-played h1 {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-img {
+    width: 36vw;
+    height: 36vw;
+    background-color: rgb(255, 208, 80);
+    text-align: center;
+}
+
+.popular-artists .card-img {
+    border-radius: 50%;
+}
+
+
+/* || FOOTER */
+footer {
+    background-color: rgb(18, 31, 105);
+    bottom: 0;
+    z-index: 3;
+}
+
+/* ! BREAKPOINT */
+/*  xs: <  576px 
+    s:  >= 576px
+    md: >= 768px
+    lg: >= 992px
+*/
