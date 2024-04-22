@@ -15,20 +15,29 @@
     <title>Spotify Web</title>
 </head>
 <body>
-    <header class="flex center-between">
+    <header class="flex">
         <nav class="upper-nav">
             <ul>
                 <li>
-                    <a href="">icon</a>
+                    <a href="">
+                        <img class="smaller-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                        <img class="bigger-logo" src="img/logo.svg" alt="Spotify Logo">
+                    </a>
                 </li>
                 <li>
-                    <a href="">icon</a>
+                    <a class="home" href="">
+                        <img src="img/home.svg" alt="Home Icon">
+                    </a>
                 </li>
                 <li>
-                    <a href="">icon</a>
+                    <a class="search" href="">
+                        <img src="img/search.svg" alt="Search Icon">
+                    </a>
                 </li>
                 <li>
-                    <a href="">icon</a>
+                    <a class="library" href="">
+                        <img src="img/libreria.svg" alt="Library Icon">
+                    </a>
                 </li>
             </ul>
             <section class="playlist-nav">
@@ -46,11 +55,15 @@
         </nav>
         <nav class="lower-nav">
             <ul>
-                <li>
-                    <a href="">icon</a>
+                <li class="download">
+                    <a href="">
+                        <img src="img/download.svg" alt="Download Icon">
+                    </a>
                 </li>
-                <li>
-                    <a href="">icon</a>
+                <li class="profile">
+                    <a href="">
+                        <img src="img/profile.svg" alt="Profile Icon">
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -77,37 +90,49 @@
                 <div class="row">
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
                     </article>
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
-                    </article>
-                </div>
-                <div class="row">
-                    <article>
-                        <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
-                    </article>
-                    <article>
-                        <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
                     </article>
                 </div>
                 <div class="row">
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
                     </article>
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
-                        <p class="card-info">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="row">
+                    <article>
+                        <div class="card-img">IMG</div>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="card-img">IMG</div>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                            <p class="info-author">autore</p>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -116,11 +141,15 @@
                 <div class="row">
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                        </div>
                     </article>
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">titolo album</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -129,20 +158,96 @@
                 <div class="row">
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                        </div>
                     </article>
                     <article>
                         <div class="card-img">IMG</div>
-                        <p class="card-title">autore</p>
+                        <div class="card-info">
+                            <p class="info-title">titolo album</p>
+                        </div>
                     </article>
                 </div>
             </section>
         </section>
     </main>
-    <footer>
-        <section class="now-playing"></section>
-        <section class="player"></section>
-        <section class="player-sidebar"></section>
+    <footer class="flex center-between">
+        <section class="now-playing flex">
+            <article class="flex">
+                <div class="card-img">IMG</div>
+                <div class="card-info">
+                    <p class="info-title">album</p>
+                    <p class="info-author">autore</p>
+                </div>
+            </article>
+            <ul class="flex">
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-regular fa-folder"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="player">
+                <ul class="flex center-between">
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-shuffle"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex center-between">
+                    <span>0:25</span>
+                <div class="progress-bar">
+                    <div class="completion-bar"></div>
+                </div>
+                <span>4:35</span>
+                </div>
+        </section>
+        <section class="player-sidebar">
+            <ul class="flex">
+                <li>
+                    <i class="fa-solid fa-list-ul"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-display"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-volume-high"></i>
+                </li>
+                <li>
+                    <div class="progress-bar">
+                        <div class="completion-bar"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </footer>
 
 </body>
