@@ -18,25 +18,32 @@
     <header class="flex">
         <nav class="upper-nav">
             <ul>
-                <li>
-                    <a href="">
-                        <img class="smaller-logo" src="img/logo-small.svg" alt="Spotify Logo">
-                        <img class="bigger-logo" src="img/logo.svg" alt="Spotify Logo">
-                    </a>
+                <li class="logo">
+                    <img class="smaller-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                    <img class="bigger-logo" src="img/logo.svg" alt="Spotify Logo">
                 </li>
-                <li>
-                    <a class="home" href="">
+                <li class="home">
+                    <a href="">
                         <img src="img/home.svg" alt="Home Icon">
                     </a>
-                </li>
-                <li>
-                    <a class="search" href="">
-                        <img src="img/search.svg" alt="Search Icon">
+                    <a href="">
+                        <span>Home</span>
                     </a>
                 </li>
-                <li>
-                    <a class="library" href="">
-                        <img src="img/libreria.svg" alt="Library Icon">
+                <li class="search">
+                    <a href="">
+                        <img src="img/search.svg" alt="Search Icon">
+                    </a>
+                    <a href="">
+                        <span>Cerca</span>
+                    </a>
+                </li>
+                <li class="library">
+                    <a href="">
+                        <img src="img/libreria.svg" alt="Library Icon"></a>
+                    </a>
+                    <a href="">
+                        <span>La tua libreria</span>
                     </a>
                 </li>
             </ul>
@@ -59,10 +66,16 @@
                     <a href="">
                         <img src="img/download.svg" alt="Download Icon">
                     </a>
+                    <a href="">
+                        <span>Installa app</span>
+                    </a>
                 </li>
                 <li class="profile">
                     <a href="">
                         <img src="img/profile.svg" alt="Profile Icon">
+                    </a>
+                    <a href="">
+                        <span>John Doe</span>
                     </a>
                 </li>
             </ul>
@@ -231,7 +244,7 @@
                 </div>
         </section>
         <section class="player-sidebar">
-            <ul class="flex">
+            <ul class="flex center-between">
                 <li>
                     <i class="fa-solid fa-list-ul"></i>
                 </li>

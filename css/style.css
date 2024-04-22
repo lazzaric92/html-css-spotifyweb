@@ -9,8 +9,21 @@ body {
 }
 
 /* || GENERAL */
+:root {
+    --footer-height: 15vh;
+}
+
 ul {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #7d7f84;
 }
 
 /* || UTILITIES */
@@ -31,7 +44,7 @@ header {
     top: 0;
     bottom: 0;
     left: 0;
-    height: 90vh;
+    height: calc(100vh - var(--footer-height));
     width: 15vw;
     z-index: 2;
     padding: .8rem 1rem .5rem;
@@ -44,36 +57,33 @@ header {
     display: none;
 }
 
-header li {
+header img{
     width: 2rem;
 }
 
-header a {
-    display: inline-block;
-    width: 100%;
+.download {
+    border-bottom: 1px solid transparent;
 }
 
-.download {
+.download img {
     width: 1.5rem;
 }
 
-.profile {
+.profile img{
     background-color: #808080;
     border-radius: 50%;
-    padding: .1rem;
     height: 2rem;
 }
 
-.upper-nav a img,
-.lower-nav a img {
-    width: 100%;
+header nav li a:last-child {
+    display: none;
 }
 
 /* || MAIN */
 .banner,
 footer {
     background-color: rgb(24, 119, 12);
-    height: 10vh;
+    height: var(--footer-height);
     position: fixed;
     left: 0;
     right: 0;
@@ -88,7 +98,7 @@ footer {
 .main-content {
     background-color: rgb(206, 30, 98);
     margin-left: 15vw;
-    padding: 10vh 0;
+    padding: var(--footer-height) 0;
 }
 
 .main-content nav ul {
@@ -162,6 +172,11 @@ footer {
     width: 100%;
 }
 
+.player a:link,
+.player a:visited {
+    color: white;
+}
+
 .progress-bar {
     background-color: #5a5a5a;
     width: 80%;
@@ -189,11 +204,6 @@ footer {
 
 /* ! almeno 576px */
 @media screen and (min-width: 576px){
-    .row {
-        width: calc((100% - 2rem) / 2);
-        margin-right: .8rem;
-    }
-
     header {
         align-items: flex-start;
     }
@@ -207,7 +217,30 @@ footer {
         display: block;
     }
 
-    .upper-nav ul li:first-child {
-        width: 7rem;
+    .logo img{
+        width: 100%;
+    }
+
+    header nav li a:last-child {
+        display: inline-block;
+    }
+
+    .download {
+        border-color: #717171;
+    }
+}
+
+/* ! almeno 768px */
+@media screen and (min-width: 768px){
+    .row {
+        width: calc((100% - 2rem) / 2);
+        margin-right: .8rem;
+    }
+}
+
+/* ! almeno 992px */
+@media screen and (min-width: 992px){
+    .row {
+        width: calc((100% - 3rem) / 3);
     }
 }
