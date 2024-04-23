@@ -10,7 +10,8 @@ body {
 
 /* || GENERAL */
 :root {
-    --footer-height: 15vh;
+    --footer-height: 90px;
+    --header-width: 55px;
 }
 
 ul {
@@ -23,7 +24,7 @@ a {
 
 a:link,
 a:visited {
-    color: #7d7f84;
+    color: #717171;
 }
 
 /* || UTILITIES */
@@ -38,18 +39,19 @@ a:visited {
 
 /* || HEADER */
 header {
-    background-color: blueviolet;
+    background-color: black;
     flex-direction: column;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     height: calc(100vh - var(--footer-height));
-    width: 15vw;
+    width: var(--header-width);
     z-index: 2;
     padding: .8rem 1rem .5rem;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
 }
 
 .bigger-logo,
@@ -61,12 +63,47 @@ header img{
     width: 2rem;
 }
 
+header nav li {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+}
+
+header span {
+    vertical-align: super;
+}
+
+.playlist-nav h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 1.5rem 0 .4rem;
+}
+
+.playlist-nav ul {
+    color: #717171;
+}
+
+.playlist-nav ul::before {
+    content: '\f0fe';
+    font-family: "Font Awesome 6 Free";
+    font: var(--fa-font-solid);
+    font-size: 2.5rem;
+    color: #a3a3a3;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.playlist-nav li {
+    margin-top: .8rem;
+}
+
 .download {
     border-bottom: 1px solid transparent;
 }
 
 .download img {
-    width: 1.5rem;
+    width: 1rem;
+    font-size: .7rem;
 }
 
 .profile img{
@@ -80,31 +117,57 @@ header nav li a:last-child {
 }
 
 /* || MAIN */
+main{
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .banner,
 footer {
-    background-color: rgb(24, 119, 12);
     height: var(--footer-height);
     position: fixed;
     left: 0;
     right: 0;
-    z-index: 1;
 }
 
 .banner {
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 0 .5rem;
+}
+
+.banner button {
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 32px;
+    padding: .5rem 1.5rem;
 }
 
 .main-content {
-    background-color: rgb(206, 30, 98);
-    margin-left: 15vw;
-    padding: var(--footer-height) 0;
+    background-color: #141922;
+    padding-top: calc(var(--footer-height) + 1rem);
+    padding-bottom: calc(var(--footer-height) + 1rem);
+    padding-right: 1rem;
+    padding-left: calc(var(--header-width) + 1rem);
+    color: white;
 }
 
 .main-content nav ul {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.main-content ul li {
+    margin: 0 1.5rem;
+    color:#7d7f84;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 2rem;
 }
 
 .recently-played,
@@ -139,10 +202,15 @@ footer {
     border-radius: 50%;
 }
 
+.info-author,
+footer .info-title {
+    color: #7d7f84;
+}
+
 
 /* || FOOTER */
 footer {
-    background-color: rgb(18, 31, 105);
+    background-color: #282828;
     bottom: 0;
     z-index: 3;
     color: white;
@@ -155,9 +223,14 @@ footer {
 
 .now-playing article,
 .now-playing ul,
+.player ul,
 .player-sidebar ul {
     justify-content: center;
     align-items: center;
+}
+
+footer i {
+    margin: 0 .5rem;
 }
 
 .now-playing ul {
@@ -170,6 +243,7 @@ footer {
 
 .player ul {
     width: 100%;
+    align-items: center;
 }
 
 .player a:link,
@@ -182,6 +256,7 @@ footer {
     width: 80%;
     height: .4rem;
     border-radius: 32px;
+    margin: 0 .4rem;
 }
 
 .completion-bar {
@@ -204,6 +279,10 @@ footer {
 
 /* ! almeno 576px */
 @media screen and (min-width: 576px){
+    :root {
+        --header-width: 225px;
+    }
+
     header {
         align-items: flex-start;
     }
