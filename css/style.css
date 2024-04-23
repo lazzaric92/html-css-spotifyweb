@@ -6,11 +6,12 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 /* || GENERAL */
 :root {
-    --footer-height: 90px;
+    --footer-height: 80px;
     --header-width: 55px;
 }
 
@@ -51,7 +52,7 @@ header {
     padding: .8rem 1rem .5rem;
     justify-content: space-between;
     align-items: center;
-    font-weight: bold;
+
 }
 
 .bigger-logo,
@@ -60,12 +61,16 @@ header {
 }
 
 header img{
-    width: 2rem;
+    width: 1.7rem;
 }
 
 header nav li {
     margin-bottom: .5rem;
     font-size: .8rem;
+}
+
+.logo {
+    margin-bottom: 1rem;
 }
 
 header span {
@@ -109,7 +114,7 @@ header span {
 .profile img{
     background-color: #808080;
     border-radius: 50%;
-    height: 2rem;
+    height: 1.7rem;
 }
 
 header nav li a:last-child {
@@ -135,7 +140,7 @@ footer {
     align-items: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, .8);
-    padding: 0 .5rem;
+    padding: 0 1.5rem;
 }
 
 .banner button {
@@ -144,7 +149,8 @@ footer {
     color: white;
     border: 1px solid white;
     border-radius: 32px;
-    padding: .5rem 1.5rem;
+    padding: .8rem 2rem;
+    font-weight: bold;
 }
 
 .main-content {
@@ -166,7 +172,6 @@ footer {
     margin: 0 1.5rem;
     color:#7d7f84;
     text-transform: uppercase;
-    font-weight: bold;
     padding-bottom: 2rem;
 }
 
@@ -180,6 +185,7 @@ footer {
 
 .recently-played h1 {
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .row {
@@ -189,13 +195,14 @@ footer {
 }
 
 .row article {
-    width: 48%
+    width: 48%;
+    text-align: center;
+    
 }
 
-.card-img {
+.card-img,
+.card-img img {
     width: 100%;
-    background-color: rgb(255, 208, 80);
-    text-align: center;
 }
 
 .popular-artists .card-img {
@@ -205,6 +212,7 @@ footer {
 .info-author,
 footer .info-title {
     color: #7d7f84;
+    font-size: .8rem;
 }
 
 
@@ -219,6 +227,15 @@ footer {
 .now-playing,
 .player-sidebar {
     width: 25%;
+}
+
+footer .card-img {
+    width: 30%;
+    margin-right: .5rem;
+}
+
+footer .info-title {
+    color: white;
 }
 
 .now-playing article,
@@ -244,11 +261,25 @@ footer i {
 .player ul {
     width: 100%;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.player a:link,
-.player a:visited {
-    color: white;
+.player i {
+    font-size: 1.3rem;
+}
+
+.play i {
+    font-size: 2rem;
+}
+
+.player ul li:last-child {
+    width: 100%;
+    margin-top: .8rem;
+}
+
+.player-sidebar i,
+footer span {
+    font-size: .8rem;
 }
 
 .progress-bar {
@@ -294,6 +325,10 @@ footer i {
     .bigger-logo,
     .playlist-nav {
         display: block;
+    }
+
+    .logo {
+        width: 9rem;
     }
 
     .logo img{
