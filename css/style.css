@@ -13,6 +13,7 @@ body {
 :root {
     --footer-height: 80px;
     --header-width: 50px;
+    --progress: 25%;
 }
 
 ul {
@@ -178,6 +179,10 @@ footer {
     font-weight: bold;
 }
 
+.banner button:hover{
+    padding: .9rem 2.2rem;
+}
+
 .main-content {
     background-color: #141922;
     padding-top: calc(var(--footer-height) + 1rem);
@@ -236,9 +241,34 @@ footer {
 .card-img,
 .card-img img {
     width: 100%;
+    position: relative;
 }
 
-.popular-artists .card-img {
+.play-album{
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    font-size: 3rem;
+}
+
+.play-album>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-img:hover .play-album{
+    display: block;
+}
+
+.popular-artists .card-img img,
+.popular-artists .play-album {
     border-radius: 50%;
 }
 
@@ -307,6 +337,11 @@ footer {
     font-size: .6rem;
 }
 
+.now-playing .info-author:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 .favourite,
 .folder {
     color: #717171;
@@ -331,6 +366,10 @@ footer {
     font-size: 1.5rem;
 }
 
+.play i:hover{
+    font-size: 1.55rem;
+}
+
 .player ul li:last-child {
     width: 100%;
     margin-top: .8rem;
@@ -343,21 +382,51 @@ footer {
 .progress-bar {
     background-color: #5a5a5a;
     width: 80%;
-    height: .2rem;
+    height: .19rem;
     border-radius: 32px;
     margin: 0 .4rem;
+    cursor: pointer;
 }
 
 .completion-bar {
     background-color: #c1c1c1;
-    width: 25%;
+    width: var(--progress);
     height: 100%;
     border-radius: 32px;
+    position: relative;
+}
+
+.progress-bar:hover .completion-bar {
+    background-color: greenyellow;
+}
+
+.completion-bar i {
+    font-size: .6rem;
+    margin: 0;
+    color: white;
+    position: absolute;
+    display: none;
+}
+
+.completion-bar>div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.progress-bar:hover .completion-bar i{
+    display: block;
 }
 
 .player-sidebar i {
     margin: 0 .2rem;
     font-size: .8rem;
+}
+
+.player-sidebar .completion-bar i {
+    margin: 0;
 }
 
 .player-sidebar ul li:last-child {
