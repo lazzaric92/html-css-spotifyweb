@@ -94,12 +94,13 @@ header span {
 .playlist-nav h1 {
     color: white;
     text-transform: uppercase;
-    font-size: 1rem;
-    margin: 1.5rem 0 .4rem;
+    font-size: .9rem;
+    margin: 1.3rem 0 .4rem;
 }
 
 .playlist-nav ul {
     color: #717171;
+    font-size: .9rem;
 }
 
 .playlist-nav ul::before {
@@ -113,22 +114,32 @@ header span {
 }
 
 .playlist-nav li {
-    margin-top: .8rem;
+    margin-top: 1rem;
+}
+
+.lower-nav img {
+    margin-right: .5rem;
 }
 
 .download {
     border-bottom: 1px solid transparent;
+    text-align: center;
 }
 
 .download img {
     width: 1rem;
-    font-size: .7rem;
+}
+
+.profile span {
+    color: white;
+    font-size: .85rem;
 }
 
 .profile img{
     background-color: #808080;
     border-radius: 50%;
-    height: 1.7rem;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 header nav li a:last-child {
@@ -154,7 +165,7 @@ footer {
     align-items: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, .5);
-    padding: 0 1.5rem;
+    padding: 0 .8rem;
 }
 
 .banner button {
@@ -235,7 +246,7 @@ footer {
 footer .info-title,
 main h1~p {
     color: #7d7f84;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 main .info-title,
@@ -262,12 +273,12 @@ footer {
     width: 30%;
 }
 
-footer .card-img {
+.now-playing .card-img {
     width: 100%;
     margin-right: .5rem;
 }
 
-footer .info-title {
+.now-playing .info-title {
     color: white;
 }
 
@@ -290,7 +301,7 @@ footer .info-title {
 }
 
 .now-playing .info-author {
-    font-size: .7rem;
+    font-size: .6rem;
 }
 
 .favourite,
@@ -314,7 +325,7 @@ footer .info-title {
 }
 
 .play i {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .player ul li:last-child {
@@ -360,11 +371,12 @@ footer .info-title {
 /* ! almeno 576px */
 @media screen and (min-width: 576px){
     :root {
-        --header-width: 225px;
+        --header-width: 200px;
     }
 
     header {
         align-items: flex-start;
+        padding: 1rem 1rem 0;
     }
 
     .smaller-logo {
@@ -377,7 +389,7 @@ footer .info-title {
     }
 
     .logo {
-        width: 9rem;
+        width: 8.5rem;
     }
 
     .logo img{
@@ -390,7 +402,25 @@ footer .info-title {
 
     .download {
         border-color: #717171;
-        text-align: center;
+        width: 160px;
+        text-align: left;
+        padding-bottom: .5rem;
+    }
+
+    .now-playing .card-img {
+        width: 36px;
+    }
+
+    .now-playing .card-info {
+        width: calc(100% - 36px);
+    }
+
+    .now-playing .info-title {
+        font-size: .7rem;
+    }
+
+    .now-playing ul {
+        width: 15%;
     }
 }
 
