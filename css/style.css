@@ -12,7 +12,7 @@ body {
 /* || GENERAL */
 :root {
     --footer-height: 80px;
-    --header-width: 55px;
+    --header-width: 50px;
 }
 
 ul {
@@ -26,6 +26,20 @@ a {
 a:link,
 a:visited {
     color: #717171;
+}
+
+a:hover,
+.now-playing i:hover,
+.playlist-nav ul:hover {
+    color: white;
+}
+
+i,
+p,
+button,
+.playlist-nav ul,
+.card-img {
+    cursor: pointer;
 }
 
 /* || UTILITIES */
@@ -139,7 +153,7 @@ footer {
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .5);
     padding: 0 1.5rem;
 }
 
@@ -157,8 +171,8 @@ footer {
     background-color: #141922;
     padding-top: calc(var(--footer-height) + 1rem);
     padding-bottom: calc(var(--footer-height) + 1rem);
-    padding-right: 1rem;
-    padding-left: calc(var(--header-width) + 1rem);
+    padding-right: .8rem;
+    padding-left: calc(var(--header-width) + .8rem);
     color: white;
 }
 
@@ -169,7 +183,8 @@ footer {
 }
 
 .main-content ul li {
-    margin: 0 1.5rem;
+    font-size: .8rem;
+    margin: 0 .4rem;
     color:#7d7f84;
     text-transform: uppercase;
     padding-bottom: 2rem;
@@ -186,18 +201,25 @@ footer {
 .recently-played h1 {
     width: 100%;
     margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.for-you h1,
+.popular-artists h1 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: .8rem;
 }
 
 .row article {
-    width: 48%;
-    text-align: center;
-    
+    width: 49%;
+    text-align: center;  
 }
 
 .card-img,
@@ -210,9 +232,19 @@ footer {
 }
 
 .info-author,
-footer .info-title {
+footer .info-title,
+main h1~p {
     color: #7d7f84;
     font-size: .8rem;
+}
+
+main .info-title,
+main .info-author {
+    margin-top: .8em;
+}
+
+main h1 ~ p {
+    margin: .8em 0 2.5em;
 }
 
 
@@ -222,15 +254,16 @@ footer {
     bottom: 0;
     z-index: 3;
     color: white;
+    padding: .5rem;
 }
 
 .now-playing,
 .player-sidebar {
-    width: 25%;
+    width: 30%;
 }
 
 footer .card-img {
-    width: 30%;
+    width: 100%;
     margin-right: .5rem;
 }
 
@@ -246,16 +279,27 @@ footer .info-title {
     align-items: center;
 }
 
-footer i {
-    margin: 0 .5rem;
-}
-
 .now-playing ul {
     flex-wrap: wrap;
+    width: 20%;
+    margin: 0 1rem;
+}
+
+.now-playing article {
+    width: calc(80% - 1rem);
+}
+
+.now-playing .info-author {
+    font-size: .7rem;
+}
+
+.favourite,
+.folder {
+    color: #717171;
 }
 
 .player {
-    width: 35%;
+    width: 38%;
 }
 
 .player ul {
@@ -265,7 +309,8 @@ footer i {
 }
 
 .player i {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin: 0 .5rem;
 }
 
 .play i {
@@ -277,15 +322,14 @@ footer i {
     margin-top: .8rem;
 }
 
-.player-sidebar i,
-footer span {
-    font-size: .8rem;
+.player span {
+    font-size: .6rem;
 }
 
 .progress-bar {
     background-color: #5a5a5a;
     width: 80%;
-    height: .4rem;
+    height: .2rem;
     border-radius: 32px;
     margin: 0 .4rem;
 }
@@ -295,6 +339,11 @@ footer span {
     width: 25%;
     height: 100%;
     border-radius: 32px;
+}
+
+.player-sidebar i {
+    margin: 0 .2rem;
+    font-size: .8rem;
 }
 
 .player-sidebar ul li:last-child {
@@ -341,6 +390,7 @@ footer span {
 
     .download {
         border-color: #717171;
+        text-align: center;
     }
 }
 
