@@ -165,7 +165,7 @@ footer {
     align-items: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, .5);
-    padding: 0 .8rem;
+    padding: 0 1.35rem;
 }
 
 .banner button {
@@ -268,14 +268,17 @@ footer {
     padding: .5rem;
 }
 
-.now-playing,
+.now-playing{
+    width: 25%;
+}
+
 .player-sidebar {
     width: 30%;
 }
 
 .now-playing .card-img {
-    width: 100%;
     margin-right: .5rem;
+    width: 36px;
 }
 
 .now-playing .info-title {
@@ -310,7 +313,7 @@ footer {
 }
 
 .player {
-    width: 38%;
+    max-width: 42%;
 }
 
 .player ul {
@@ -320,12 +323,12 @@ footer {
 }
 
 .player i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0 .5rem;
 }
 
 .play i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .player ul li:last-child {
@@ -407,10 +410,6 @@ footer {
         padding-bottom: .5rem;
     }
 
-    .now-playing .card-img {
-        width: 36px;
-    }
-
     .now-playing .card-info {
         width: calc(100% - 36px);
     }
@@ -427,14 +426,83 @@ footer {
 /* ! almeno 768px */
 @media screen and (min-width: 768px){
     .row {
-        width: calc((100% - 2rem) / 2);
+        width: calc((100% - 1.8rem) / 2);
         margin-right: .8rem;
+    }
+
+    .now-playing {
+        max-width: 190px;
+    }
+
+    .now-playing ul {
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+    }
+
+    .player {
+        width: 28%;
+    }
+
+    .player-sidebar {
+        max-width: 228px;
+    }
+
+    .player-sidebar ul {
+        justify-content: space-around;
+        padding-left: 1rem;
     }
 }
 
 /* ! almeno 992px */
 @media screen and (min-width: 992px){
+    header span,
+    header nav li,
+    .info-title,
+    .now-playing i,
+    .player-sidebar i {
+        font-size: .7rem;
+    }
+
+    .logo img {
+        width: 90%;
+    }
+
+    .playlist-nav ul,
+    .player i {
+        font-size: .8rem;
+    }
+
+    .main-content ul li {
+        font-size: .7rem;
+        margin: 0 .6rem;
+    }
+
+    .recently-played,
+    .for-you,
+    .popular-artists {
+        width: 100%;
+    }
+
     .row {
-        width: calc((100% - 3rem) / 3);
+        width: calc((100% - 1.5rem) / 3);
+        margin-right: .5rem;
+    }
+
+    .info-author {
+        font-size: .49rem;
+    }
+
+    .player {
+        min-width: 275px;
+        max-width: 400px;
+    }
+
+    .play i {
+        font-size: 1.2rem;
+    }
+
+    .player span {
+        font-size: .5rem;
     }
 }
