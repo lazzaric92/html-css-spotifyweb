@@ -64,7 +64,6 @@ header {
     height: calc(100vh - var(--footer-height));
     width: var(--header-width);
     z-index: 2;
-    padding: .8rem 1rem .5rem;
     justify-content: space-between;
     align-items: center;
 
@@ -80,12 +79,20 @@ header img{
 }
 
 header nav li {
-    margin-bottom: .5rem;
+    padding: .5rem .8rem;
     font-size: .8rem;
 }
 
 .logo {
-    margin-bottom: 1rem;
+    margin: .5rem 0 0;
+}
+
+.home,
+.search,
+.library {
+    margin: .5rem 0;
+    padding: 0 .7rem;
+    border-left: 3px solid transparent;
 }
 
 header span {
@@ -96,7 +103,7 @@ header span {
     color: white;
     text-transform: uppercase;
     font-size: .9rem;
-    margin: 1.3rem 0 .4rem;
+    margin: 1.3rem .8rem .4rem;
 }
 
 .playlist-nav ul {
@@ -112,10 +119,7 @@ header span {
     color: #a3a3a3;
     vertical-align: middle;
     margin-right: .5rem;
-}
-
-.playlist-nav li {
-    margin-top: 1rem;
+    margin-left: .8rem;
 }
 
 .lower-nav img {
@@ -123,12 +127,21 @@ header span {
 }
 
 .download {
-    border-bottom: 1px solid transparent;
     text-align: center;
 }
 
 .download img {
     width: 1rem;
+    margin: 0 auto;
+}
+
+.lower-nav ul li:nth-last-child(2){
+    display: none;
+    padding: 0 .5rem;
+}
+
+.lower-nav li>hr {
+    border-color:  #717171;
 }
 
 .profile span {
@@ -141,6 +154,7 @@ header span {
     border-radius: 50%;
     height: 1.5rem;
     width: 1.5rem;
+    margin: 0 auto;
 }
 
 header nav li a:last-child {
@@ -166,7 +180,7 @@ footer {
     align-items: center;
     z-index: 1;
     background-color: rgba(0, 0, 0, .5);
-    padding: 0 1.35rem;
+    padding: 0 .7rem;
 }
 
 .banner button {
@@ -204,6 +218,12 @@ footer {
     color:#7d7f84;
     text-transform: uppercase;
     padding-bottom: 2rem;
+}
+
+main hr {
+    width: 2rem;
+    margin: .1rem auto;
+    border-color: transparent;
 }
 
 .recently-played,
@@ -293,7 +313,7 @@ main h1 ~ p {
 footer {
     background-color: #282828;
     bottom: 0;
-    z-index: 3;
+    z-index: 4;
     color: white;
     padding: .5rem;
 }
@@ -397,7 +417,7 @@ footer {
 }
 
 .progress-bar:hover .completion-bar {
-    background-color: greenyellow;
+    background-color: #adff2f;
 }
 
 .completion-bar i {
@@ -448,7 +468,6 @@ footer {
 
     header {
         align-items: flex-start;
-        padding: 1rem 1rem 0;
     }
 
     .smaller-logo {
@@ -473,10 +492,13 @@ footer {
     }
 
     .download {
-        border-color: #717171;
         width: 160px;
         text-align: left;
         padding-bottom: .5rem;
+    }
+
+    .lower-nav ul li:nth-last-child(2){
+        display: block;
     }
 
     .now-playing .card-info {
@@ -497,6 +519,10 @@ footer {
     .row {
         width: calc((100% - 1.8rem) / 2);
         margin-right: .8rem;
+    }
+
+    main .info-title {
+        font-size: .8rem;
     }
 
     .now-playing {
@@ -542,6 +568,10 @@ footer {
         font-size: .8rem;
     }
 
+    .banner {
+        padding: 0 1.35rem;
+    }
+
     .main-content ul li {
         font-size: .7rem;
         margin: 0 .6rem;
@@ -574,4 +604,13 @@ footer {
     .player span {
         font-size: .5rem;
     }
+}
+
+/* ** STYLE */
+.highlighted-left {
+    border-left-color: #adff2f;
+}
+
+.highlighted {
+    border-color: #adff2f;
 }
