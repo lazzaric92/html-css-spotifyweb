@@ -328,7 +328,8 @@ footer {
 
 .now-playing .card-img {
     margin-right: .5rem;
-    width: 36px;
+    min-width: 24px;
+    max-width: 36px;
 }
 
 .now-playing .info-title {
@@ -402,7 +403,7 @@ footer {
 .progress-bar {
     background-color: #5a5a5a;
     width: 80%;
-    height: .19rem;
+    height: .2rem;
     border-radius: 32px;
     margin: 0 .4rem;
     cursor: pointer;
@@ -428,6 +429,12 @@ footer {
     display: none;
 }
 
+.player .completion-bar i {
+    font-size: .7rem;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
 .completion-bar>div{
     width: 100%;
     display: flex;
@@ -435,14 +442,13 @@ footer {
     align-items: center;
 }
 
-
 .progress-bar:hover .completion-bar i{
     display: block;
 }
 
 .player-sidebar i {
     margin: 0 .2rem;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .player-sidebar .completion-bar i {
@@ -468,6 +474,10 @@ footer {
 
     header {
         align-items: flex-start;
+    }
+
+    .highlighted-left {
+        border-left-color: #adff2f;
     }
 
     .smaller-logo {
@@ -607,8 +617,8 @@ footer {
 }
 
 /* ** STYLE */
-.highlighted-left {
-    border-left-color: #adff2f;
+.highlighted-left > a{
+    color: white;
 }
 
 .highlighted {
