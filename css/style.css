@@ -99,6 +99,11 @@ header span {
     vertical-align: super;
 }
 
+.playlist-nav {
+    overflow-y: auto;
+    width: 165px;
+}
+
 .playlist-nav h1 {
     color: white;
     text-transform: uppercase;
@@ -109,13 +114,15 @@ header span {
 .playlist-nav ul {
     color: #717171;
     font-size: .9rem;
+    overflow-y: auto;
+    max-height: 260px;
 }
 
 .playlist-nav ul::before {
     content: '\f0fe';
     font-family: "Font Awesome 6 Free";
     font: var(--fa-font-solid);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: #a3a3a3;
     vertical-align: middle;
     margin-right: .5rem;
@@ -167,7 +174,7 @@ main{
     overflow-y: auto;
 }
 
-.banner,
+.call-to-action,
 footer {
     height: var(--footer-height);
     position: fixed;
@@ -175,7 +182,7 @@ footer {
     right: 0;
 }
 
-.banner {
+.call-to-action {
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
@@ -183,7 +190,7 @@ footer {
     padding: 0 .7rem;
 }
 
-.banner button {
+.call-to-action button {
     text-transform: uppercase;
     background-color: transparent;
     color: white;
@@ -193,13 +200,13 @@ footer {
     font-weight: bold;
 }
 
-.banner button:hover{
+.call-to-action button:hover{
     padding: .9rem 2.2rem;
 }
 
 .main-content {
     background-color: #141922;
-    padding-top: calc(var(--footer-height) + 1rem);
+    padding-top: calc(var(--footer-height) + 1.5rem);
     padding-bottom: calc(var(--footer-height) + 1rem);
     padding-right: .8rem;
     padding-left: calc(var(--header-width) + .8rem);
@@ -230,6 +237,7 @@ main hr {
 .for-you,
 .popular-artists {
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 95%;
     margin: 0 auto;
 }
@@ -254,7 +262,7 @@ main hr {
 }
 
 .row article {
-    width: 49%;
+    width: 48%;
     text-align: center;  
 }
 
@@ -466,10 +474,10 @@ footer {
     lg: >= 992px
 */
 
-/* ! almeno 576px */
+/* ! almeno 576px di larghezza */
 @media screen and (min-width: 576px){
     :root {
-        --header-width: 200px;
+        --header-width: 180px;
     }
 
     header {
@@ -524,11 +532,10 @@ footer {
     }
 }
 
-/* ! almeno 768px */
+/* ! almeno 768px di larghezza */
 @media screen and (min-width: 768px){
     .row {
-        width: calc((100% - 1.8rem) / 2);
-        margin-right: .8rem;
+        width: calc((100% - .8rem) / 2);
     }
 
     main .info-title {
@@ -559,7 +566,7 @@ footer {
     }
 }
 
-/* ! almeno 992px */
+/* ! almeno 992px di larghezza */
 @media screen and (min-width: 992px){
     header span,
     header nav li,
@@ -578,7 +585,7 @@ footer {
         font-size: .8rem;
     }
 
-    .banner {
+    .call-to-action {
         padding: 0 1.35rem;
     }
 
@@ -595,7 +602,6 @@ footer {
 
     .row {
         width: calc((100% - 1.5rem) / 3);
-        margin-right: .5rem;
     }
 
     .info-author {
@@ -604,7 +610,6 @@ footer {
 
     .player {
         min-width: 275px;
-        max-width: 400px;
     }
 
     .play i {
@@ -613,6 +618,17 @@ footer {
 
     .player span {
         font-size: .5rem;
+    }
+}
+
+/* ! sotto i 400px di altezza */
+@media screen and (max-height: 400px){
+    .call-to-action{
+        display: none;
+    }
+
+    .main-content{
+        padding-top: 1.5rem;
     }
 }
 
