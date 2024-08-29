@@ -621,6 +621,13 @@ footer {
     }
 }
 
+/* ! almeno 1400px di larghezza */
+@media screen and (min-width: 1400px){
+    .info-author {
+        font-size: .65rem;
+    }
+}
+
 /* ! sotto i 400px di altezza */
 @media screen and (max-height: 400px){
     .call-to-action{
